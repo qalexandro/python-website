@@ -1,1 +1,9 @@
-hola mundo
+{% extends 'base.html' %}
+
+{% block content %}
+
+Hello visit my list blog <a class = "text-red-500" href = "{% url 'blog:home' %}"> here </a> </br>
+If you need help press <a href = "{% url 'help' %}"> here </a> <br/>
+If you need to create a post press <a href = "{% url 'blog:create' %}"> here </a>
+
+{% endblock content %}

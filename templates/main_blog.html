@@ -1,0 +1,13 @@
+lista de blogs
+<br>
+{% for post in  posts%}
+</br>
+<a href = {% url 'blog:detail' post.id %}>{{post.title}} </a>
+&nbsp; &nbsp; &nbsp; &nbsp;
+<a href = {% url 'blog:update' post.id %}> Update </a>
+&nbsp; &nbsp; &nbsp; &nbsp;
+<a href = {% url 'blog:delete' post.id %}> Delete </a>
+
+{% endfor %}
+</br></br>
+<a href = "{% url 'main_home' %}"> return to main page here</a>
